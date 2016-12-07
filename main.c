@@ -6,40 +6,69 @@
  */
 
 #include "leds.h"
+#include "util/delay.h"
+
+#define SMOOTH_DELAY 25
+#define COLOR_SWITCH_DELAY 5000
 
 int main(void) {
 	InitTimersForLeds();
 	InitLeds();
 	sei();
-	SetColorRGB(0xA0, 0xA0, 0xA0);
 	while (1) {
-//	LedsDelay(1000);
-//	SetColorSmoothRGB(0xFF, 0x00, 0x00, 10);
-//	LedsDelay(1000);
-//	SetColorSmoothRGB(0x00, 0xFF, 0x00, 10);
-//	LedsDelay(1000);
-//	SetColorSmoothRGB(0x00, 0x00, 0xFF, 10);
-	LedsDelay(1000);
-	SetColorRGB(0xFF, 0x00, 0x00);
-	LedsDelay(1000);
-	SetColorRGB(0x00, 0xFF, 0x00);
-	LedsDelay(1000);
-	SetColorRGB(0x00, 0x00, 0xFF);
-
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Navy, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Teal, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Purple, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Olive, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Maroon, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Silver, 10);
-//		LedsDelay(1000);
-//		SetColorSmoothRGB(Cyan, 10);
-		asm("nop");
+		SetColorSmoothRGB(midnight_blue, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Red, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Green, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Blue, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Navy, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(black, SMOOTH_DELAY); //pause - leds off
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Teal, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Purple, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Olive, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Maroon, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Silver, SMOOTH_DELAY);//white
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(dark_red, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(Cyan, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(black, SMOOTH_DELAY); //pause - leds off
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(azure, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(dark_orange, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(aqua, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(orange, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(deep_sky_blue, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(gold, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(black, SMOOTH_DELAY); //pause - leds off
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(dodger_blue, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(dark_magenta, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(pring_green, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(magenta, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(orange_red, SMOOTH_DELAY);
+		LedsDelay(COLOR_SWITCH_DELAY);
+		SetColorSmoothRGB(black, SMOOTH_DELAY); //pause - leds off
+		LedsDelay(COLOR_SWITCH_DELAY);
 	}
 }
